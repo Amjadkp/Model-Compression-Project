@@ -1,0 +1,5 @@
+Timestamp,Status,Action,Time,Log Type
+2025-03-07_09-20-41,model not zipped,send,0.023740291595459,Send
+2025-03-07_09-20-41,model not zipped,recv,0.023316860198975,Receive
+2025-03-07_09-41-45,model zipped,Recv + extract ,0.014164447784424,Receive
+2025-03-07_09-41-45,model zipped,zipping + sent,0.003870964050293,send
