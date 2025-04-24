@@ -1,0 +1,67 @@
+import torch
+import torch.distributed as dist
+import torch.nn as nn
+from model import Net
+from compression import apply_random_mask, apply_subsampling, apply_quantization, apply_random_rotation
+import subprocess
+import os
+
+def server(rank, world_size):
+    os.environ['GLOO_SOCKET_IFNAME'] = "eno1"
+    os.environ['MASTER_ADDR'] = "172.16.66.131"
+    os.environ['MASTER_PORT'] = "6006"
+    # Initialize distributed environment
+    dist.init_process_group(backend='gloo', init_method='tcp://172.16.66.131:6006', world_size=world_size, rank=rank)
+    
+    # Initialize model
+    model = Net()
+    model.eval()
+    
+    # Federated Learning loop
+    num_rounds = 10
+    for round in range(num_rounds):
+        print(f"Round {round + 1}/{num_rounds}")
+        
+        # Broadcast current model to clients
+        for param in model.parameters():
+            dist.broadcast(param.data, src=0)  # Server is rank 0
+        
+        # Receive updates from clients
+        updates = [torch.zeros_like(param) for param in model.parameters()]
+        for client_rank in range(1, world_size):
+            for i, param in enumerate(model.parameters()):
+                # Receive compressed update
+                compressed_update = torch.zeros_like(param)
+                dist.recv(tensor=compressed_update, src=client_rank)
+                # Decompress (e.g., inverse rotation, adjust for subsampling/quantization)
+                update = compressed_update  # Placeholder; add decompression logic
+                updates[i] += update
+        
+        # Aggregate updates (average)
+        for i, param in enumerate(model.parameters()):
+            updates[i] /= (world_size - 1)  # Average over clients
+            param.data += updates[i]  # Update global model
+    
+    # Save final model
+    torch.save(model.state_dict(), 'global_model.pth')
+    dist.destroy_process_group()
+
+if __name__ == '__main__':
+    world_size = 3 
+    # client1_ip = "172.16.66.212"
+    # client2_ip = "172.16.66.250"
+    # client1_script = "/home/tomsy/Desktop/paper/federated_learning/client.py 1"
+    # client2_script = "/home/tomsy/Desktop/paper/federated_learning/client.py 2"
+    # ssh_cmd_1= (
+    #     f"ssh tomsy@{client1_ip} "
+    #     f"'source /home/tomsy/Desktop/paper/venv/bin/activate && "
+    #     f"nohup python3 {client1_script} > /home/tomsy/Desktop/paper/federated_learning/client1.log 2>&1 &'"
+    # )
+    # ssh_cmd_2 = (
+    #     f"ssh tomsy@{client2_ip} "
+    #     f"'source /home/tomsy/Desktop/paper/venv/bin/activate && "
+    #     f"nohup python3 {client2_script} > /home/tomsy/Desktop/paper/federated_learning/client2.log 2>&1 &'"
+    # )#
+    # server_process = subprocess.Popen(ssh_cmd_1, shell=True)
+    # server_process = subprocess.Popen(ssh_cmd_2, shell=True)
+    server(0, world_size)
