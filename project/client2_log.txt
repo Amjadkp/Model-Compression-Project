@@ -1,0 +1,64 @@
+2025-04-26 17:14:31,529 - Running federated learning with random_mask compression
+2025-04-26 17:14:31,529 - Client 2, Round 1/5
+2025-04-26 17:15:30,933 - Client 2, Round 1, Technique: random_mask, Accuracy: 0.9539, Loss: 0.1547, Comm Cost: 0.17 MB
+2025-04-26 17:15:30,935 - Client 2, Round 2/5
+2025-04-26 17:15:44,454 - Client 2, Round 2, Technique: random_mask, Accuracy: 0.9692, Loss: 0.1007, Comm Cost: 0.17 MB
+2025-04-26 17:15:44,454 - Client 2, Round 3/5
+2025-04-26 17:15:57,997 - Client 2, Round 3, Technique: random_mask, Accuracy: 0.9739, Loss: 0.0814, Comm Cost: 0.17 MB
+2025-04-26 17:15:57,999 - Client 2, Round 4/5
+2025-04-26 17:16:11,512 - Client 2, Round 4, Technique: random_mask, Accuracy: 0.9771, Loss: 0.0751, Comm Cost: 0.17 MB
+2025-04-26 17:16:11,514 - Client 2, Round 5/5
+2025-04-26 17:16:23,720 - Client 2, Round 5 Accuracy with random_mask: 0.9807
+2025-04-26 17:16:25,109 - Client 2, Round 5, Technique: random_mask, Accuracy: 0.9807, Loss: 0.0639, Comm Cost: 0.17 MB
+2025-04-26 17:16:25,110 - Reinitialized the model for next compression technique.
+2025-04-26 17:16:25,110 - Running federated learning with subsampling compression
+2025-04-26 17:16:25,110 - Client 2, Round 1/5
+2025-04-26 17:16:38,636 - Client 2, Round 1, Technique: subsampling, Accuracy: 0.9523, Loss: 0.1589, Comm Cost: 0.17 MB
+2025-04-26 17:16:38,637 - Client 2, Round 2/5
+2025-04-26 17:16:52,157 - Client 2, Round 2, Technique: subsampling, Accuracy: 0.9665, Loss: 0.1048, Comm Cost: 0.17 MB
+2025-04-26 17:16:52,158 - Client 2, Round 3/5
+2025-04-26 17:17:05,679 - Client 2, Round 3, Technique: subsampling, Accuracy: 0.9719, Loss: 0.0866, Comm Cost: 0.17 MB
+2025-04-26 17:17:05,681 - Client 2, Round 4/5
+2025-04-26 17:17:19,143 - Client 2, Round 4, Technique: subsampling, Accuracy: 0.9763, Loss: 0.0742, Comm Cost: 0.17 MB
+2025-04-26 17:17:19,143 - Client 2, Round 5/5
+2025-04-26 17:17:31,163 - Client 2, Round 5 Accuracy with subsampling: 0.9788
+2025-04-26 17:17:32,654 - Client 2, Round 5, Technique: subsampling, Accuracy: 0.9788, Loss: 0.0660, Comm Cost: 0.17 MB
+2025-04-26 17:17:32,654 - Reinitialized the model for next compression technique.
+2025-04-26 17:17:32,654 - Running federated learning with quantization compression
+2025-04-26 17:17:32,654 - Client 2, Round 1/5
+2025-04-26 17:17:46,189 - Client 2, Round 1, Technique: quantization, Accuracy: 0.9567, Loss: 0.1485, Comm Cost: 0.17 MB
+2025-04-26 17:17:46,190 - Client 2, Round 2/5
+2025-04-26 17:17:59,738 - Client 2, Round 2, Technique: quantization, Accuracy: 0.9715, Loss: 0.0940, Comm Cost: 0.17 MB
+2025-04-26 17:17:59,739 - Client 2, Round 3/5
+2025-04-26 17:18:13,741 - Client 2, Round 3, Technique: quantization, Accuracy: 0.9754, Loss: 0.0796, Comm Cost: 0.17 MB
+2025-04-26 17:18:13,743 - Client 2, Round 4/5
+2025-04-26 17:18:27,643 - Client 2, Round 4, Technique: quantization, Accuracy: 0.9803, Loss: 0.0663, Comm Cost: 0.17 MB
+2025-04-26 17:18:27,644 - Client 2, Round 5/5
+2025-04-26 17:18:39,872 - Client 2, Round 5 Accuracy with quantization: 0.9812
+2025-04-26 17:18:41,240 - Client 2, Round 5, Technique: quantization, Accuracy: 0.9812, Loss: 0.0610, Comm Cost: 0.17 MB
+2025-04-26 17:18:41,241 - Reinitialized the model for next compression technique.
+2025-04-26 17:18:41,241 - Running federated learning with random_rotation compression
+2025-04-26 17:18:41,241 - Client 2, Round 1/5
+2025-04-26 17:18:55,037 - Client 2, Round 1, Technique: random_rotation, Accuracy: 0.9548, Loss: 0.1517, Comm Cost: 0.17 MB
+2025-04-26 17:18:55,038 - Client 2, Round 2/5
+2025-04-26 17:19:08,610 - Client 2, Round 2, Technique: random_rotation, Accuracy: 0.9665, Loss: 0.1042, Comm Cost: 0.17 MB
+2025-04-26 17:19:08,612 - Client 2, Round 3/5
+2025-04-26 17:19:22,169 - Client 2, Round 3, Technique: random_rotation, Accuracy: 0.9742, Loss: 0.0810, Comm Cost: 0.17 MB
+2025-04-26 17:19:22,170 - Client 2, Round 4/5
+2025-04-26 17:19:36,493 - Client 2, Round 4, Technique: random_rotation, Accuracy: 0.9773, Loss: 0.0715, Comm Cost: 0.17 MB
+2025-04-26 17:19:36,495 - Client 2, Round 5/5
+2025-04-26 17:19:48,315 - Client 2, Round 5 Accuracy with random_rotation: 0.9783
+2025-04-26 17:19:49,896 - Client 2, Round 5, Technique: random_rotation, Accuracy: 0.9783, Loss: 0.0624, Comm Cost: 0.17 MB
+2025-04-26 17:19:49,896 - Reinitialized the model for next compression technique.
+2025-04-26 17:19:49,896 - Running federated learning with no compression
+2025-04-26 17:19:49,896 - Client 2, Round 1/5 (No Compression)
+2025-04-26 17:20:03,464 - Client 2, Round 1, Technique: none, Accuracy: 0.9559, Loss: 0.1450, Comm Cost: 0.17 MB
+2025-04-26 17:20:03,465 - Client 2, Round 2/5 (No Compression)
+2025-04-26 17:20:16,938 - Client 2, Round 2, Technique: none, Accuracy: 0.9706, Loss: 0.0960, Comm Cost: 0.17 MB
+2025-04-26 17:20:16,939 - Client 2, Round 3/5 (No Compression)
+2025-04-26 17:20:31,098 - Client 2, Round 3, Technique: none, Accuracy: 0.9762, Loss: 0.0777, Comm Cost: 0.17 MB
+2025-04-26 17:20:31,100 - Client 2, Round 4/5 (No Compression)
+2025-04-26 17:20:44,533 - Client 2, Round 4, Technique: none, Accuracy: 0.9789, Loss: 0.0700, Comm Cost: 0.17 MB
+2025-04-26 17:20:44,534 - Client 2, Round 5/5 (No Compression)
+2025-04-26 17:20:56,519 - Client 2, Round 5 Accuracy with no compression: 0.9818
+2025-04-26 17:20:58,255 - Client 2, Round 5, Technique: none, Accuracy: 0.9818, Loss: 0.0613, Comm Cost: 0.17 MB
