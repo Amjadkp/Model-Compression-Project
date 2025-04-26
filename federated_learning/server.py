@@ -48,20 +48,4 @@ def server(rank, world_size):
 
 if __name__ == '__main__':
     world_size = 3 
-    # client1_ip = "172.16.66.212"
-    # client2_ip = "172.16.66.250"
-    # client1_script = "/home/tomsy/Desktop/paper/federated_learning/client.py 1"
-    # client2_script = "/home/tomsy/Desktop/paper/federated_learning/client.py 2"
-    # ssh_cmd_1= (
-    #     f"ssh tomsy@{client1_ip} "
-    #     f"'source /home/tomsy/Desktop/paper/venv/bin/activate && "
-    #     f"nohup python3 {client1_script} > /home/tomsy/Desktop/paper/federated_learning/client1.log 2>&1 &'"
-    # )
-    # ssh_cmd_2 = (
-    #     f"ssh tomsy@{client2_ip} "
-    #     f"'source /home/tomsy/Desktop/paper/venv/bin/activate && "
-    #     f"nohup python3 {client2_script} > /home/tomsy/Desktop/paper/federated_learning/client2.log 2>&1 &'"
-    # )#
-    # server_process = subprocess.Popen(ssh_cmd_1, shell=True)
-    # server_process = subprocess.Popen(ssh_cmd_2, shell=True)
     server(0, world_size)

@@ -1,0 +1,20 @@
+2025-04-26 18:02:00,077 - Client 1, Round 1/10
+2025-04-26 18:02:13,865 - Client 1, Round 1, Accuracy: 0.9478, Loss: 0.1720, Comm Cost: 0.17 MB
+2025-04-26 18:02:13,865 - Client 1, Round 2/10
+2025-04-26 18:02:27,443 - Client 1, Round 2, Accuracy: 0.9656, Loss: 0.1072, Comm Cost: 0.17 MB
+2025-04-26 18:02:27,443 - Client 1, Round 3/10
+2025-04-26 18:02:41,669 - Client 1, Round 3, Accuracy: 0.9763, Loss: 0.0793, Comm Cost: 0.17 MB
+2025-04-26 18:02:41,670 - Client 1, Round 4/10
+2025-04-26 18:02:55,192 - Client 1, Round 4, Accuracy: 0.9787, Loss: 0.0684, Comm Cost: 0.17 MB
+2025-04-26 18:02:55,192 - Client 1, Round 5/10
+2025-04-26 18:03:08,695 - Client 1, Round 5, Accuracy: 0.9809, Loss: 0.0617, Comm Cost: 0.17 MB
+2025-04-26 18:03:08,695 - Client 1, Round 6/10
+2025-04-26 18:03:22,168 - Client 1, Round 6, Accuracy: 0.9817, Loss: 0.0560, Comm Cost: 0.17 MB
+2025-04-26 18:03:22,168 - Client 1, Round 7/10
+2025-04-26 18:03:35,721 - Client 1, Round 7, Accuracy: 0.9831, Loss: 0.0522, Comm Cost: 0.17 MB
+2025-04-26 18:03:35,721 - Client 1, Round 8/10
+2025-04-26 18:03:49,259 - Client 1, Round 8, Accuracy: 0.9841, Loss: 0.0483, Comm Cost: 0.17 MB
+2025-04-26 18:03:49,259 - Client 1, Round 9/10
+2025-04-26 18:04:02,802 - Client 1, Round 9, Accuracy: 0.9857, Loss: 0.0443, Comm Cost: 0.17 MB
+2025-04-26 18:04:02,802 - Client 1, Round 10/10
+2025-04-26 18:04:16,352 - Client 1, Round 10, Accuracy: 0.9854, Loss: 0.0437, Comm Cost: 0.17 MB
